@@ -98,7 +98,7 @@ export const IndexPage = () => {
             <Content>
                 <Header>
                     <Name>Chris Bentivenga</Name>
-                    <Subheader>Software Engineer</Subheader>
+                    <Subheader>Software Engineer, Musician</Subheader>
                 </Header>
                 <Spacer />
                 <Details>
