@@ -4,7 +4,9 @@ import { Table, THead, TH, TBody, TR, TD } from "../components/table";
 const PROVIDERS = [
     ["Venmo", "https://venmo.com/u/ChrisBenti91"],
     ["CashApp", "https://cash.app/$chrisbenti"],
-    ["PayPal", "https://paypal.me/ChrisBentivenga?locale.x=en_US"]
+    ["PayPal", "https://paypal.me/ChrisBentivenga"],
+    ["Zelle", "chris@chrisbenti.com"],
+    ["Apple Cash", "chris@chrisbenti.com"]
 ];
 export const SendMoney = () => {
     return (
@@ -19,7 +21,11 @@ export const SendMoney = () => {
                         <TR key={id}>
                             <TD>{provider}</TD>
                             <TD>
-                                <a href={link}>{link}</a>
+                                {link.startsWith("http") ? (
+                                    <a href={link}>{link}</a>
+                                ) : (
+                                    link
+                                )}
                             </TD>
                         </TR>
                     ))}
