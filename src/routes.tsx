@@ -2,7 +2,6 @@ import { Clock } from "./pages/Clock";
 import { BlackPage } from "./pages/BlackPage";
 import { SparrowPage } from "./pages/SparrowPage";
 import { ResumePage } from "./pages/ResumePage";
-import { FindTime } from "./pages/FindTime";
 import { ResourcesPage } from "./pages/ResourcesPage";
 import { Calendar } from "./pages/Calendar";
 import { SendMoney } from "./pages/SendMoney";
@@ -14,10 +13,6 @@ export const ReactRoutes = {
     "/resume": {
         component: <ResumePage />,
         title: "Resume | Chris Bentivenga"
-    },
-    "/find-time": {
-        component: <FindTime />,
-        title: "Find Time | Chris Bentivenga"
     },
     "/ls": {
         component: <ResourcesPage />,
@@ -39,5 +34,6 @@ export const RedirectRoutes = {
         "https://us04web.zoom.us/j/4894814721?pwd=T05md1JJaUFGNG9oZ09vRHJ3RlQ5QT09",
     "/how-it-works":
         "https://docs.google.com/document/d/1QGgCjgyL10sENRjS8uEywqrc7sY7Qs306ny_ZID4Ixw/edit?usp=sharing",
-    "/drop": "https://www.dropbox.com/request/N24zVQFjrYVEGzYLQw2B"
+    "/drop": "https://www.dropbox.com/request/N24zVQFjrYVEGzYLQw2B",
+    "/find-time": "https://hub.flexibits.com/openings/chrisbenti/30min/"
 };
