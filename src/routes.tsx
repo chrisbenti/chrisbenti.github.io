@@ -40,5 +40,6 @@ export const RedirectRoutes = {
     "/how-it-works":
         "https://docs.google.com/document/d/1QGgCjgyL10sENRjS8uEywqrc7sY7Qs306ny_ZID4Ixw/edit?usp=sharing",
     "/drop": "https://www.dropbox.com/request/N24zVQFjrYVEGzYLQw2B",
-    "/find-time": "https://hub.flexibits.com/openings/chrisbenti/30min/"
+    "/find-time": "https://hub.flexibits.com/openings/chrisbenti/30min/",
+    "/headshot": "/headshot.png"
 };
