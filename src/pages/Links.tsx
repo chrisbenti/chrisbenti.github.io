@@ -3,6 +3,7 @@ import importLinks from "../data/links.json";
 
 import { COLORS } from "../colors";
 import { Sans } from "../components/sans";
+import { RoyalBluePage } from "../components/royalBluePage";
 
 const links = importLinks as any;
 
@@ -39,18 +40,20 @@ const Section = styled.div`
 
 export const LinksPage = () => {
     return (
-        <Content>
-            {Object.keys(links).map((title) => (
-                <Section>
-                    <Title>{title}</Title>
+        <RoyalBluePage>
+            <Content>
+                {Object.keys(links).map((title) => (
+                    <Section>
+                        <Title>{title}</Title>
 
-                    {Object.keys(links[title]).map((name) => (
-                        <Sans>
-                            <Link href={links[title][name]}>{name}</Link>
-                        </Sans>
-                    ))}
-                </Section>
-            ))}
-        </Content>
+                        {Object.keys(links[title]).map((name) => (
+                            <Sans>
+                                <Link href={links[title][name]}>{name}</Link>
+                            </Sans>
+                        ))}
+                    </Section>
+                ))}
+            </Content>
+        </RoyalBluePage>
     );
 };

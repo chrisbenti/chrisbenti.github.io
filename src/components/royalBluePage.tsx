@@ -21,6 +21,9 @@ const WrappingBox = styled.div`
     align-items: center;
     justify-content: center;
     text-align: center;
+
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
 `;
 
 const WrappingBoxNoBorder = styled.div`
