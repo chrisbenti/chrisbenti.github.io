@@ -15,13 +15,14 @@ const WrappingBox = styled.div`
     color: ${COLORS.ROYAL_BLUE};
     background-color: ${COLORS.OFF_WHITE};
 
-    padding: 3em;
+    padding: 0 3em;
 
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
 
+    overflow-x: hidden;
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
 `;

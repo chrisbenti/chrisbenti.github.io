@@ -25,17 +25,21 @@ const Link = styled.a`
     color: white;
     text-decoration: none;
     text-align: center;
+    border-radius: 100px;
+
+    &:hover {
+        opacity: 50%;
+    }
 `;
 
 const Title = styled.div`
-    margin: 0.5em;
+    margin: 0.5em 0;
     font-size: 1.25em;
     font-weight: bold;
 `;
 
 const Section = styled.div`
     text-align: center;
-    margin: 1em;
 `;
 
 export const LinksPage = () => {
