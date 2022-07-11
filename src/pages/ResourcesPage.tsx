@@ -4,7 +4,15 @@ import { Table, THead, TH, TBody, TR, TD } from "../components/table";
 const RESOURCES = [
     ["/", "Home page. Think of it as a business card", "chrisbenti.com"],
     ["/resume", "Link to my resume.", "chrisbenti.com/resume"],
-    ["/find-time", "Schedule a meeting with me.", "chrisbenti.com/find-time"],
+    [
+        "/find-time",
+        "Schedule a 30 minute meeting with me.",
+        "chrisbenti.com/find-time"
+    ],
+    ["/30min", "Schedule a 30 minute meeting with me.", "chrisbenti.com/30min"],
+    ["/60min", "Schedule a 60 minute meeting with me.", "chrisbenti.com/60min"],
+    ["/1hour", "Schedule a 60 minute meeting with me.", "chrisbenti.com/1hour"],
+
     ["/zoom", "Personal Zoom link.", "chrisbenti.com/zoom"],
     [
         "/how-it-works",
@@ -13,7 +21,8 @@ const RESOURCES = [
     ],
     ["/cal", "Calendar Page, no details", "chrisbenti.com/cal"],
     ["/send-money", "Send money to me", "chrisbenti.com/send-money"],
-    ["/drop", "Drop Site", "chrisbenti.com/drop"]
+    ["/drop", "Drop Site", "chrisbenti.com/drop"],
+    ["/headshot", "Headshot", "chrisbenti.com/headshot"]
 ];
 
 export const ResourcesPage = () => (

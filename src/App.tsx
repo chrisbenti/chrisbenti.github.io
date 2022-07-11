@@ -9,32 +9,30 @@ function App() {
     return (
         <Router basename="/">
             <Switch>
-                {Object.entries(RedirectRoutes).map(([url, location]) => (
-                    <Route path={url} key={url}>
-                        <RedirectPage href={location} />
-                    </Route>
-                ))}
-
-                {Object.entries(ReactRoutes).map(([url, details]) => (
-                    <Route key={url} path={url}>
+                {[
+                    Object.entries(RedirectRoutes).map(([url, location]) => (
+                        <Route path={url} key={url}>
+                            <RedirectPage href={location} />
+                        </Route>
+                    )),
+                    Object.entries(ReactRoutes).map(([url, details]) => (
+                        <Route key={url} path={url}>
+                            <Helmet>
+                                <title>{details.title}</title>
+                            </Helmet>
+                            {details.component}
+                        </Route>
+                    )),
+                    <Route exact path="/">
                         <Helmet>
-                            <title>{details.title}</title>
+                            <title>Chris Bentivenga</title>
                         </Helmet>
-                        {details.component}
+                        <IndexPage />
+                    </Route>,
+                    <Route>
+                        <NotFoundPage />
                     </Route>
-                ))}
-
-                {/* Index page last so there's no chance it conflicts with anything */}
-                <Route exact path="/">
-                    <Helmet>
-                        <title>Chris Bentivenga</title>
-                    </Helmet>
-                    <IndexPage />
-                </Route>
-
-                <Route>
-                    <NotFoundPage />
-                </Route>
+                ].flat()}
             </Switch>
         </Router>
     );
