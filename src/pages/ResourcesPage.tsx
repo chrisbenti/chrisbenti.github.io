@@ -9,10 +9,6 @@ const RESOURCES = [
         "Schedule a 30 minute meeting with me.",
         "chrisbenti.com/find-time"
     ],
-    ["/30min", "Schedule a 30 minute meeting with me.", "chrisbenti.com/30min"],
-    ["/60min", "Schedule a 60 minute meeting with me.", "chrisbenti.com/60min"],
-    ["/1hour", "Schedule a 60 minute meeting with me.", "chrisbenti.com/1hour"],
-
     ["/zoom", "Personal Zoom link.", "chrisbenti.com/zoom"],
     [
         "/how-it-works",
