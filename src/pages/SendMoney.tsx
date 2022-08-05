@@ -6,7 +6,8 @@ const PROVIDERS = [
     ["CashApp", "https://cash.app/$chrisbenti"],
     ["PayPal", "https://paypal.me/ChrisBentivenga"],
     ["Zelle", "chris@chrisbenti.com"],
-    ["Apple Cash", "chris@chrisbenti.com"]
+    ["Apple Cash", "chris@chrisbenti.com"],
+    ["Messenger Pay", "https://m.me/chris.bentivenga"],
 ];
 export const SendMoney = () => {
     return (
