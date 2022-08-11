@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "@emotion/styled";
 import importLinks from "../data/links.json";
 
 import { COLORS } from "../colors";

@@ -1,5 +1,5 @@
 import { RoyalBluePage } from "../components/royalBluePage";
-import styled from "styled-components";
+import styled from "@emotion/styled";
 import { VscFilePdf } from "react-icons/vsc";
 import { COLORS } from "../colors";
 

@@ -1,5 +1,5 @@
 import { RoyalBluePage } from "../components/royalBluePage";
-import styled from "styled-components";
+import styled from "@emotion/styled";
 import { GrDocumentMissing } from "react-icons/gr";
 import { COLORS } from "../colors";
 

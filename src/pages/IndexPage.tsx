@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "@emotion/styled";
 
 import { ImLinkedin, ImLink } from "react-icons/im";
 import { IoIosMail } from "react-icons/io";
