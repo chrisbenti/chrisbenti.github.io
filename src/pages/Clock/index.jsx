@@ -1,6 +1,5 @@
 import React from "react";
 import ClockNumber from "./ClockNumber";
-import moment from "moment";
 import { useBackgroundColor } from "../../hooks/useBackgroundColor";
 
 export const Clock = () => {
@@ -12,12 +11,12 @@ export class OldClock extends React.Component {
     constructor() {
         super();
 
-        const time = moment();
+        const time = new Date();
         this.state = {
             time
         };
         setInterval(() => {
-            const time = moment();
+            const time = new Date();
             this.setState({ time });
         }, 1000);
     }
@@ -33,8 +32,9 @@ export class OldClock extends React.Component {
 
         const { time } = this.state;
 
-        const hours = time.hours() > 12 ? time.hours() % 12 : time.hours();
-        const minutes = time.minutes();
+        const hours =
+            time.getHours() > 12 ? time.getHours() % 12 : time.getHours();
+        const minutes = time.getMinutes();
 
         return (
             <div style={style}>
