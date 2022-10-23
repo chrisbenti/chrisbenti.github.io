@@ -45,5 +45,7 @@ export const RedirectRoutes = {
     "/60min": "https://fantastical.app/chrisbenti/60min",
     "/1hour": "https://fantastical.app/chrisbenti/60min",
     "/headshot": "/headshot.png",
-    "/linkedin": "https://www.linkedin.com/in/chrisbenti/"
+    "/linkedin": "https://www.linkedin.com/in/chrisbenti/",
+    "/intro":
+        "https://docs.google.com/document/d/1OtgIkY-jbDCSHzjHS6JXMUsjbMYQFZ2xQM0EXP0N6bw"
 };
