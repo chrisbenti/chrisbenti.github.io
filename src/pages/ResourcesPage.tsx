@@ -4,16 +4,12 @@ import { Table, THead, TH, TBody, TR, TD } from "../components/table";
 const RESOURCES = [
     ["/", "Home page. Think of it as a business card", "chrisbenti.com"],
     ["/resume", "Link to my resume.", "chrisbenti.com/resume"],
+    ["/meet", "Schedule a 30 minute meeting with me.", "chrisbenti.com/meet"],
     [
         "/find-time",
         "Schedule a 30 minute meeting with me.",
         "chrisbenti.com/find-time"
     ],
-    ["/30min", "Schedule a 30 minute meeting with me.", "chrisbenti.com/30min"],
-    ["/60min", "Schedule a 60 minute meeting with me.", "chrisbenti.com/60min"],
-    ["/1hour", "Schedule a 60 minute meeting with me.", "chrisbenti.com/1hour"],
-
-    ["/zoom", "Personal Zoom link.", "chrisbenti.com/zoom"],
     [
         "/how-it-works",
         "Documentation on how the site works",
