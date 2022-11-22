@@ -1,45 +1,53 @@
-import { RoyalBluePage } from "../components/royalBluePage";
+import { BoringCenter } from "../components/royalBluePage";
 import { Table, THead, TH, TBody, TR, TD } from "../components/table";
+import { ReactRoutes, RedirectRoutes, IFramePages } from "../routes";
+import { useMemo } from "react";
+import { HiClipboardCopy } from "react-icons/hi";
 
-const RESOURCES = [
-    ["/", "Home page. Think of it as a business card", "chrisbenti.com"],
-    ["/resume", "Link to my resume.", "chrisbenti.com/resume"],
-    ["/meet", "Schedule a 30 minute meeting with me.", "chrisbenti.com/meet"],
-    [
-        "/find-time",
-        "Schedule a 30 minute meeting with me.",
-        "chrisbenti.com/find-time"
-    ],
-    [
-        "/how-it-works",
-        "Documentation on how the site works",
-        "chrisbenti.com/how-it-works"
-    ],
-    ["/cal", "Calendar Page, no details", "chrisbenti.com/cal"],
-    ["/send-money", "Send money to me", "chrisbenti.com/send-money"],
-    ["/drop", "Drop Site", "chrisbenti.com/drop"],
-    ["/headshot", "Headshot", "chrisbenti.com/headshot"]
-];
-
-export const ResourcesPage = () => (
-    <RoyalBluePage>
-        <Table>
-            <THead>
-                <TH>Path</TH>
-                <TH>Description</TH>
-                <TH>URL</TH>
-            </THead>
-            <TBody>
-                {RESOURCES.map(([path, desc, full], id) => (
-                    <TR>
-                        <TD>{path}</TD>
-                        <TD>{desc}</TD>
-                        <TD>
-                            <a href={`https://${full}`}>{full}</a>
-                        </TD>
-                    </TR>
-                ))}
-            </TBody>
-        </Table>
-    </RoyalBluePage>
-);
+export const ResourcesPage = () => {
+    const resources = useMemo(
+        () =>
+            [ReactRoutes, RedirectRoutes, IFramePages]
+                .map((x) => Object.entries(x))
+                .flat()
+                .map(([path, { description }]) => ({
+                    path,
+                    description,
+                    full: `http://chrisbenti.com${path}`
+                }))
+                .sort((a, b) => (a.path > b.path ? 1 : -1)),
+        []
+    );
+    return (
+        <BoringCenter>
+            <Table style={{ margin: "1em" }}>
+                <THead>
+                    <TH></TH>
+                    <TH>Path</TH>
+                    <TH>Description</TH>
+                </THead>
+                <TBody>
+                    {resources.map(({ path, description, full }, id) => (
+                        <TR key={id}>
+                            <TD>
+                                <button
+                                    onClick={() => {
+                                        navigator.clipboard.writeText(full);
+                                    }}
+                                >
+                                    <HiClipboardCopy
+                                        size={20}
+                                    ></HiClipboardCopy>
+                                </button>
+                            </TD>
+                            <TD>
+                                <a href={full}>{path}</a>
+                            </TD>
+                            <TD>{description}</TD>
+                        </TR>
+                    ))}
+                </TBody>
+            </Table>
+        </BoringCenter>
+    );
+};

@@ -41,6 +41,12 @@ const WrappingBoxNoBorder = styled.div`
     text-align: center;
 `;
 
+export const BoringCenter = (props: { children?: React.ReactNode }) => (
+    <RoyalFont>
+        <WrappingBoxNoBorder {...props} />
+    </RoyalFont>
+);
+
 export const NoPaddingNoBluePage = (props: { children?: React.ReactNode }) => (
     <RoyalFont>
         <Div100vh style={{ width: "100vw" }}>
