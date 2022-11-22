@@ -11,11 +11,13 @@ function App() {
         <Router>
             <Routes>
                 {[
-                    Object.entries(RedirectRoutes).map(([url, location]) => (
+                    Object.entries(RedirectRoutes).map(([url, details]) => (
                         <Route
                             path={url}
                             key={url}
-                            element={<RedirectPage href={location} />}
+                            element={
+                                <RedirectPage href={details.destination} />
+                            }
                         ></Route>
                     )),
                     Object.entries(ReactRoutes).map(([url, details]) => (
@@ -32,13 +34,13 @@ function App() {
                             }
                         ></Route>
                     )),
-                    Object.entries(IFramePages).map(([url, target]) => (
+                    Object.entries(IFramePages).map(([url, details]) => (
                         <Route
                             key={url}
                             path={url}
                             element={
                                 <>
-                                    <IFramePage url={target} />
+                                    <IFramePage url={details.destination} />
                                 </>
                             }
                         ></Route>
