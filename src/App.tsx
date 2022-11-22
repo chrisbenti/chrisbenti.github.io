@@ -1,13 +1,14 @@
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
-import { ReactRoutes, RedirectRoutes } from "./routes";
+import { ReactRoutes, RedirectRoutes, IFramePages } from "./routes";
 import { RedirectPage } from "./pages/RedirectPage";
 import { IndexPage } from "./pages/IndexPage";
 import { Helmet } from "react-helmet";
 import { NotFoundPage } from "./pages/NotFoundPage";
+import { IFramePage } from "./components/iFramePage";
 
 function App() {
     return (
-        <Router basename="/">
+        <Router>
             <Routes>
                 {[
                     Object.entries(RedirectRoutes).map(([url, location]) => (
@@ -27,6 +28,17 @@ function App() {
                                         <title>{details.title}</title>
                                     </Helmet>
                                     {details.component}
+                                </>
+                            }
+                        ></Route>
+                    )),
+                    Object.entries(IFramePages).map(([url, target]) => (
+                        <Route
+                            key={url}
+                            path={url}
+                            element={
+                                <>
+                                    <IFramePage url={target} />
                                 </>
                             }
                         ></Route>

@@ -3,7 +3,6 @@ import { BlackPage } from "./pages/BlackPage";
 import { SparrowPage } from "./pages/SparrowPage";
 import { ResumePage } from "./pages/ResumePage";
 import { ResourcesPage } from "./pages/ResourcesPage";
-import { Calendar } from "./pages/Calendar";
 import { SendMoney } from "./pages/SendMoney";
 import { LinksPage } from "./pages/Links";
 
@@ -18,14 +17,6 @@ export const ReactRoutes = {
     "/ls": {
         component: <ResourcesPage />,
         title: "Available Resources | Chris Bentivenga"
-    },
-    "/cal": {
-        component: <Calendar />,
-        title: "Calendar | Chris Bentivenga"
-    },
-    "/send-money": {
-        component: <SendMoney />,
-        title: "Send Money | Chris Bentivenga"
     },
     "/links": {
         component: <LinksPage />,
@@ -43,5 +34,11 @@ export const RedirectRoutes = {
     "/headshot": "/headshot.png",
     "/linkedin": "https://www.linkedin.com/in/chrisbenti/",
     "/intro":
-        "https://docs.google.com/document/d/1OtgIkY-jbDCSHzjHS6JXMUsjbMYQFZ2xQM0EXP0N6bw"
+        "https://docs.google.com/document/d/1OtgIkY-jbDCSHzjHS6JXMUsjbMYQFZ2xQM0EXP0N6bw",
+    "/send-money":
+        "https://chrisbenti.notion.site/Send-Money-cdf683da5d0b4607aa53ad9119f3fc9c"
+};
+
+export const IFramePages = {
+    "/cal": "https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FLos_Angeles&amp;src=Y2hyaXMuYmVudGl2ZW5nYUBnbWFpbC5jb20&amp;src=OHRpczk1bW5rcGY2N2E4c2d0djdhZmJzaXM0ajhwdXZAaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20&amp;src=Y2hyaXNiZW50aUBzdHJpcGUuY29t&amp;color=%234285F4&amp;color=%234285F4&amp;color=%234285F4&amp;showTitle=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;mode=WEEK"
 };
