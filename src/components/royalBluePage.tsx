@@ -41,7 +41,7 @@ const WrappingBoxNoBorder = styled.div`
     text-align: center;
 `;
 
-export const NoPaddingNoBluePage: React.FunctionComponent = (props) => (
+export const NoPaddingNoBluePage = (props: { children?: React.ReactNode }) => (
     <RoyalFont>
         <Div100vh style={{ width: "100vw" }}>
             <WrappingBoxNoBorder {...props} />
@@ -49,7 +49,7 @@ export const NoPaddingNoBluePage: React.FunctionComponent = (props) => (
     </RoyalFont>
 );
 
-export const RoyalBluePage: React.FunctionComponent = (props) => (
+export const RoyalBluePage = (props: { children?: React.ReactNode }) => (
     <RoyalFont>
         <Div100vh style={{ width: "100vw" }}>
             <WrappingBox {...props} />

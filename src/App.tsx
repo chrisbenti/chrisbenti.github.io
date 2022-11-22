@@ -1,4 +1,4 @@
-import { HashRouter as Router, Switch, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import { ReactRoutes, RedirectRoutes } from "./routes";
 import { RedirectPage } from "./pages/RedirectPage";
 import { IndexPage } from "./pages/IndexPage";
@@ -8,32 +8,44 @@ import { NotFoundPage } from "./pages/NotFoundPage";
 function App() {
     return (
         <Router basename="/">
-            <Switch>
+            <Routes>
                 {[
                     Object.entries(RedirectRoutes).map(([url, location]) => (
-                        <Route path={url} key={url}>
-                            <RedirectPage href={location} />
-                        </Route>
+                        <Route
+                            path={url}
+                            key={url}
+                            element={<RedirectPage href={location} />}
+                        ></Route>
                     )),
                     Object.entries(ReactRoutes).map(([url, details]) => (
-                        <Route key={url} path={url}>
-                            <Helmet>
-                                <title>{details.title}</title>
-                            </Helmet>
-                            {details.component}
-                        </Route>
+                        <Route
+                            key={url}
+                            path={url}
+                            element={
+                                <>
+                                    <Helmet>
+                                        <title>{details.title}</title>
+                                    </Helmet>
+                                    {details.component}
+                                </>
+                            }
+                        ></Route>
                     )),
-                    <Route exact path="/">
-                        <Helmet>
-                            <title>Chris Bentivenga</title>
-                        </Helmet>
-                        <IndexPage />
-                    </Route>,
-                    <Route>
-                        <NotFoundPage />
-                    </Route>
+                    <Route
+                        path="/"
+                        key="/"
+                        element={
+                            <>
+                                <Helmet>
+                                    <title>Chris Bentivenga</title>
+                                </Helmet>
+                                <IndexPage />
+                            </>
+                        }
+                    ></Route>,
+                    <Route key="notfound" element={<NotFoundPage />}></Route>
                 ].flat()}
-            </Switch>
+            </Routes>
         </Router>
     );
 }
