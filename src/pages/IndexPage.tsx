@@ -97,7 +97,7 @@ export const IndexPage = () => {
         <RoyalBluePage>
             <Content>
                 <Header>
-                    <Name>Chris Bentivenga</Name>
+                    <Name>BETA SITE</Name>
                     <Subheader>Software Engineer, Musician</Subheader>
                 </Header>
                 <Spacer />
