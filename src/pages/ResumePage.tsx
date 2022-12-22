@@ -1,41 +1,13 @@
-import { RoyalBluePage } from "../components/royalBluePage";
-import styled from "@emotion/styled";
-import { VscFilePdf } from "react-icons/vsc";
-import { COLORS } from "../colors";
-
-const ResumeLink = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-`;
-
-const ResumeA = styled.a`
-    text-decoration: none;
-    color: ${COLORS.ROYAL_BLUE};
-    padding: 2em;
-    &:hover {
-        border: dashed 1px ${COLORS.ROYAL_BLUE};
-    }
-`;
-
-const ResumeText = styled.div`
-    margin-top: 0.3em;
-    font-size: 1.5em;
-    font-weight: semi-bold;
-`;
-
-const ResumeIcon = styled(VscFilePdf)`
-    font-size: 5em;
-`;
+import { NextGenPage } from "../components/royalBluePage";
+import { LinkContainer, LinkWithArrow, Name } from "../components/text";
 
 export const ResumePage = () => (
-    <RoyalBluePage>
-        <ResumeLink>
-            <ResumeA href="https://www.chrisbenti.com/resume-content/chris-bentivenga-resume.pdf">
-                <ResumeIcon />
-                <ResumeText>(Click Me)</ResumeText>
-            </ResumeA>
-        </ResumeLink>
-    </RoyalBluePage>
+    <NextGenPage>
+        <LinkContainer>
+            <LinkWithArrow href="https://www.chrisbenti.com/resume-content/chris-bentivenga-resume.pdf">
+                View
+            </LinkWithArrow>
+        </LinkContainer>
+        <Name>Chris Bentivenga's Resume</Name>
+    </NextGenPage>
 );

@@ -19,6 +19,9 @@ const NextGenPageContainer = styled.div`
     @media (max-width: ${PHONE_SIZE}) {
         margin: 1.25rem;
     }
+
+    display: flex;
+    flex-direction: column;
 `;
 export const NextGenPage = (props: { children?: React.ReactNode }) => (
     <RoyalFont>
