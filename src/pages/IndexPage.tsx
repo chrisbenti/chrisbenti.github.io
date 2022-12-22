@@ -1,138 +1,97 @@
 import styled from "@emotion/styled";
 
-import { ImLinkedin, ImLink } from "react-icons/im";
-import { IoIosMail } from "react-icons/io";
 import { useBackgroundColor } from "../hooks/useBackgroundColor";
 import { COLORS } from "../colors";
-import { RoyalBluePage } from "../components/royalBluePage";
+import { NextGenPage } from "../components/royalBluePage";
 
 const Content = styled.div`
     display: flex;
     flex-direction: column;
-    align-items: center;
-
     @media (min-width: 768px) {
-        flex-direction: row;
     }
 `;
-
-const Header = styled.div``;
 
 const Name = styled.div`
     font-weight: 700;
     font-size: 2.5em;
-
+    margin-top: 0.25em;
     @media (max-width: 470px) {
-        font-size: 2em;
+        font-size: 2.35em;
     }
-`;
-
-const Subheader = styled.div`
-    padding-top: 0.1em;
-    font-size: 1.2em;
-    font-weight: 300;
-    display: none;
-
-    @media (min-width: 768px) {
-        display: block;
-    }
-`;
-
-const Spacer = styled.div`
-    border-top: solid 1px ${COLORS.ROYAL_BLUE};
-    width: 100%;
-    height: 0;
-    margin: 1.2em 0;
-
-    @media (min-width: 768px) {
-        border-top: none;
-        border-left: solid 1px ${COLORS.ROYAL_BLUE};
-        width: 0;
-        height: unset;
-        align-self: stretch;
-        margin: 0 2em;
-    }
+    text-align: left;
+    color: ${COLORS.ROYAL_BLUE};
 `;
 
 const Details = styled.div`
+    font-size: 1.5em;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
+    width: 100%;
 
-    @media (min-width: 768px) {
-        align-items: flex-start;
-    }
-`;
-
-const DetailItem = styled.div`
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    &:not(:first-child) {
-        margin-top: 0.3em;
-    }
-`;
-
-const DetailIcon = styled.div`
-    margin-right: 0.5em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+    align-items: flex-start;
 `;
 
 const DetailLink = styled.a`
     text-decoration: none;
     color: ${COLORS.ROYAL_BLUE};
+    display: inline-block;
+    position: relative;
+
+    &:not(:first-child) {
+        margin-top: 0.3em;
+    }
+
+    &:after {
+        background: none repeat scroll 0 0 transparent;
+        bottom: 0;
+        content: "";
+        display: block;
+        height: 3px;
+        left: 50%;
+        position: absolute;
+        background: ${COLORS.ROYAL_BLUE};
+        transition: width 0.3s ease 0s, left 0.3s ease 0s;
+        width: 0;
+    }
+    &:hover:after {
+        // Media query to prevent hover effects on mobile (collides with presses and makes it v ugly)
+        @media (hover: hover) and (pointer: fine) {
+            width: 100%;
+            left: 0;
+        }
+    }
+
+    // ::after {
+    //     content: "⮕";
+    //     padding-left: 0.4em;
+    //     font-size: 0.6em;
+    //     vertical-align: middle;
+    // }
 `;
 
 export const IndexPage = () => {
-    useBackgroundColor(COLORS.ROYAL_BLUE);
+    useBackgroundColor(COLORS.OFF_WHITE);
     return (
-        <RoyalBluePage>
+        <NextGenPage>
             <Content>
-                <Header>
-                    <Name>BETA SITE</Name>
-                    <Subheader>Software Engineer, Musician</Subheader>
-                </Header>
-                <Spacer />
                 <Details>
-                    <DetailItem>
-                        <DetailIcon>
-                            <IoIosMail />
-                        </DetailIcon>
-                        <DetailLink
-                            target="_blank"
-                            href="mailto:chris@chrisbenti.com"
-                        >
-                            chris@chrisbenti.com
-                        </DetailLink>
-                    </DetailItem>
-                    <DetailItem>
-                        <DetailIcon>
-                            <ImLink />
-                        </DetailIcon>
-                        <DetailLink target="_blank" href="//chrisbenti.com">
-                            chrisbenti.com
-                        </DetailLink>
-                    </DetailItem>
-                    <DetailItem>
-                        <DetailIcon>
-                            <ImLinkedin />
-                        </DetailIcon>
-                        <DetailLink
-                            target="_blank"
-                            href="https://www.linkedin.com/in/chrisbenti/"
-                        >
-                            chrisbenti
-                        </DetailLink>
-                    </DetailItem>
+                    <DetailLink href="//chrisbenti.com">
+                        chrisbenti.com
+                    </DetailLink>
+
+                    <DetailLink href="mailto:chris@chrisbenti.com">
+                        chris@chrisbenti.com
+                    </DetailLink>
+
+                    <DetailLink href="https://www.linkedin.com/in/chrisbenti/">
+                        linkedin.com/in/chrisbenti
+                    </DetailLink>
                 </Details>
+                <Name>Chris Bentivenga</Name>
             </Content>
-        </RoyalBluePage>
+        </NextGenPage>
     );
 };
