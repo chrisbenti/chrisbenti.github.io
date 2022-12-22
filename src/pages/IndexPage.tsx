@@ -2,7 +2,6 @@ import styled from "@emotion/styled";
 
 import { ImLinkedin, ImLink } from "react-icons/im";
 import { IoIosMail } from "react-icons/io";
-import { GoGlobe } from "react-icons/go";
 import { useBackgroundColor } from "../hooks/useBackgroundColor";
 import { COLORS } from "../colors";
 import { RoyalBluePage } from "../components/royalBluePage";
