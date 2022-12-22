@@ -104,17 +104,6 @@ export const IndexPage = () => {
                 <Details>
                     <DetailItem>
                         <DetailIcon>
-                            <GoGlobe />
-                        </DetailIcon>
-                        <DetailLink
-                            target="_blank"
-                            href="https://www.google.com/maps/place/Seattle,+WA/data=!4m2!3m1!1s0x5490102c93e83355:0x102565466944d59a?sa=X&ved=2ahUKEwjhu_nA2ffcAhUD3Z8KHdR1BQYQ8gEwGHoECAsQCw"
-                        >
-                            Seattle, WA
-                        </DetailLink>
-                    </DetailItem>
-                    <DetailItem>
-                        <DetailIcon>
                             <IoIosMail />
                         </DetailIcon>
                         <DetailLink

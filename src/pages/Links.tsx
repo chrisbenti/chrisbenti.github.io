@@ -2,7 +2,6 @@ import styled from "@emotion/styled";
 import importLinks from "../data/links.json";
 
 import { COLORS } from "../colors";
-import { Sans } from "../components/sans";
 import { RoyalBluePage } from "../components/royalBluePage";
 
 const links = importLinks as any;
@@ -51,9 +50,7 @@ export const LinksPage = () => {
                         <Title>{title}</Title>
 
                         {Object.keys(links[title]).map((name) => (
-                            <Sans>
-                                <Link href={links[title][name]}>{name}</Link>
-                            </Sans>
+                            <Link href={links[title][name]}>{name}</Link>
                         ))}
                     </Section>
                 ))}

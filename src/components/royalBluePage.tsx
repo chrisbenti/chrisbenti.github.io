@@ -3,7 +3,7 @@ import { COLORS } from "../colors";
 import Div100vh from "react-div-100vh";
 
 const RoyalFont = styled.div`
-    font-family: "Raleway", sans-serif;
+    font-family: "DM Sans", sans-serif;
 `;
 
 const WrappingBox = styled.div`
