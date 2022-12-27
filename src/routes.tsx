@@ -3,7 +3,7 @@ import { BlackPage } from "./pages/BlackPage";
 import { SparrowPage } from "./pages/SparrowPage";
 import { ResumePage } from "./pages/ResumePage";
 import { ResourcesPage } from "./pages/ResourcesPage";
-import { LinksPage } from "./pages/Links";
+
 import React from "react";
 
 type IReactRoutes = {
@@ -40,11 +40,6 @@ export const ReactRoutes: IReactRoutes = {
         title: "Available Resources | Chris Bentivenga",
         description:
             "This page. Just descriptions of all of the pages on this site."
-    },
-    "/links": {
-        component: <LinksPage />,
-        title: "Links | Chris Bentivenga",
-        description: "My 'link tree'"
     }
 };
 
