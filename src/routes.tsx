@@ -76,7 +76,7 @@ export const RedirectRoutes: IRedirectRoutes = {
     },
     "/intro": {
         destination:
-            "https://docs.google.com/document/d/1OtgIkY-jbDCSHzjHS6JXMUsjbMYQFZ2xQM0EXP0N6bw",
+            "https://www.notion.so/chrisbenti/Chris-Bentivenga-Introduction-14b2e6f29df2478b9078e825dc74d8aa",
         description: "An intro document to me as part of my job search."
     },
     "/send-money": {
