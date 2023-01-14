@@ -25,6 +25,12 @@ export const ReactRoutes: IReactRoutes = {
         description:
             "Just a black web page. Useful if you want to black out a monitor, but not turn it off."
     },
+    "/black/:color": {
+        component: <BlackPage />,
+        title: "Black Page",
+        description:
+            "Just a black web page. Useful if you want to black out a monitor, but not turn it off."
+    },
     "/sparrow": {
         component: <SparrowPage />,
         title: "JACK SPARROW",
