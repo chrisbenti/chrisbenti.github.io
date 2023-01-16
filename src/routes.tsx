@@ -89,6 +89,14 @@ export const RedirectRoutes: IRedirectRoutes = {
         destination:
             "https://chrisbenti.notion.site/Send-Money-cdf683da5d0b4607aa53ad9119f3fc9c",
         description: "Ways to send me money"
+    },
+    "/resume-content": {
+        destination: "https://resume.chrisbenti.com",
+        description: "backcompat of old resume link"
+    },
+    "/resume-content/*": {
+        destination: "https://resume.chrisbenti.com",
+        description: "backcompat of old resume link"
     }
 };
 

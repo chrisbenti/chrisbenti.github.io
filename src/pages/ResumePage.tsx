@@ -4,7 +4,7 @@ import { LinkContainer, LinkWithArrow, Name } from "../components/text";
 export const ResumePage = () => (
     <NextGenPage>
         <LinkContainer>
-            <LinkWithArrow href="https://www.chrisbenti.com/resume-content/chris-bentivenga-resume.pdf">
+            <LinkWithArrow href="http://resume.chrisbenti.com/chris-bentivenga-resume.pdf">
                 View
             </LinkWithArrow>
         </LinkContainer>
