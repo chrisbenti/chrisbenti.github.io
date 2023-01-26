@@ -68,12 +68,12 @@ export const RedirectRoutes: IRedirectRoutes = {
             "Drop site, if you want to send me a file but not via email/messages"
     },
     "/meet": {
-        destination: "https://calendly.com/chrisbenti",
-        description: "Calendly link, make a meeting with me."
+        destination: "https://cal.com/chrisbenti",
+        description: "Meeting link, make a meeting with me."
     },
     "/find-time": {
-        destination: "https://calendly.com/chrisbenti",
-        description: "Calendly link, make a meeting with me."
+        destination: "https://cal.com/chrisbenti",
+        description: "Meeting link, make a meeting with me."
     },
     "/headshot": { destination: "/headshot.png", description: "My headshot." },
     "/linkedin": {
