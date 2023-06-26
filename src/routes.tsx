@@ -97,6 +97,18 @@ export const RedirectRoutes: IRedirectRoutes = {
     "/resume-content/*": {
         destination: "https://resume.chrisbenti.com",
         description: "backcompat of old resume link"
+    },
+    "/calendly": {
+        destination: "https://calendly.com/chrisbenti",
+        description: "Calendly link"
+    },
+    "/cal": {
+        destination: "https://cal.com/chrisbenti",
+        description: "Meeting link, make a meeting with me."
+    },
+    "/cal2": {
+        destination: "https://calendly.com/chrisbenti",
+        description: "Calendly link"
     }
 };
 
