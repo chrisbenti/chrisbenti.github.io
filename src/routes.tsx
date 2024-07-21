@@ -80,11 +80,6 @@ export const RedirectRoutes: IRedirectRoutes = {
         destination: "https://www.linkedin.com/in/chrisbenti/",
         description: "My LinkedIn"
     },
-    "/intro": {
-        destination:
-            "https://chrisbenti-public.notion.site/Intro-d1af89ecc0204c298f23a9c28c0b7372?pvs=4",
-        description: "An intro document to me as part of my job search."
-    },
     "/send-money": {
         destination:
             "https://chrisbenti.notion.site/Send-Money-cdf683da5d0b4607aa53ad9119f3fc9c",
@@ -109,10 +104,21 @@ export const RedirectRoutes: IRedirectRoutes = {
     "/cal2": {
         destination: "https://calendly.com/chrisbenti",
         description: "Calendly link"
+    },
+    "/cv": {
+        destination:
+            "https://chrisbenti.notion.site/CV-Chris-Bentivenga-8f73539934804d1eaa0de3ffc84ad8a6?pvs=4",
+        description: "full work history in CV format"
     }
 };
 
 type IIFramePages = {
     [url: string]: { destination: string; description: string };
 };
-export const IFramePages: IIFramePages = {};
+export const IFramePages: IIFramePages = {
+    "/see-cal": {
+        destination:
+            "https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FLos_Angeles&bgcolor=%23ffffff&mode=WEEK&title=Chris's%20Calendar&showPrint=0&showTabs=0&showCalendars=0&src=Y2hyaXMuYmVudGl2ZW5nYUBnbWFpbC5jb20&src=NzlrcWtucmQydnFubjlibG9tNTI5c3R2MG9AZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=YWM3NjUxZmI2ZTI2MzIwODM0YjAwODQyNmM3YjlhZTk2NWE2ZDY4YjQ2YzUxYmUzZmU5YTMxMTVkMWYyMDAwM0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=OHRpczk1bW5rcGY2N2E4c2d0djdhZmJzaXM0ajhwdXZAaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20&src=M244dmRrbzFqYzEyanRocW01dnRyOGpta3JocjN0NThAaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20&src=Y19tdTdqanFyZGFpazZhbjlwZ3VuODc0bmRoY0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=Y2hyaXNiZW50aXZlbmdhQHNxdWFyZXVwLmNvbQ&color=%230B8043&color=%2333B679&color=%23009688&color=%236326c5&color=%23009688&color=%23F09300&color=%23616161",
+        description: "Google Calendar iframe"
+    }
+};
