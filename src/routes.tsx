@@ -109,6 +109,11 @@ export const RedirectRoutes: IRedirectRoutes = {
         destination:
             "https://chrisbenti.notion.site/CV-Chris-Bentivenga-8f73539934804d1eaa0de3ffc84ad8a6?pvs=4",
         description: "full work history in CV format"
+    },
+    "/umikot": {
+        destination:
+            "https://chrisbenti.notion.site/Umikot-97462acd80d84e2499857e27a31e04b5?pvs=74",
+        description: "umikot instructions to share with people I give them too."
     }
 };
 
