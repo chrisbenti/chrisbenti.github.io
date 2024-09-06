@@ -1,6 +1,10 @@
-import React from "react";
-
-export default function SplitNumbers({ num1, num2 }) {
+export default function SplitNumbers({
+    num1,
+    num2
+}: {
+    num1: number;
+    num2?: number;
+}) {
     return (
         <div style={{ display: "flex", textAlign: "center" }}>
             {typeof num1 === "number" && (

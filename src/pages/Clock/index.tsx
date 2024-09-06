@@ -7,9 +7,11 @@ export const Clock = () => {
     return <OldClock></OldClock>;
 };
 
-export class OldClock extends React.Component {
-    constructor() {
-        super();
+// eslint-disable-next-line @typescript-eslint/no-empty-object-type
+export class OldClock extends React.Component<{}, { time: Date }> {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    constructor(props: any) {
+        super(props);
 
         const time = new Date();
         this.state = {

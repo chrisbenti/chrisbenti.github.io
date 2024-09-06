@@ -1,6 +1,12 @@
 import SplitNumbers from "../SplitNumbers";
 
-export default function ClockNumber({ num1, num2 }) {
+export default function ClockNumber({
+    num1,
+    num2
+}: {
+    num1: number;
+    num2?: number;
+}) {
     const size = 80;
     const borderRadius = "10vmin";
 
@@ -32,7 +38,7 @@ export default function ClockNumber({ num1, num2 }) {
 
     return (
         <div style={{ fontFamily: "Helvetica" }}>
-            <div style={topStyle}>
+            <div style={topStyle as never}>
                 <div
                     style={{
                         position: "relative",
@@ -42,7 +48,7 @@ export default function ClockNumber({ num1, num2 }) {
                     {<SplitNumbers num1={num1} num2={num2} />}
                 </div>
             </div>
-            <div style={bottomStyle}>
+            <div style={bottomStyle as never}>
                 <div
                     style={{
                         position: "relative",
