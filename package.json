@@ -12,8 +12,6 @@
         "spellcheck": "cspell src/**/*.{tsx,ts,html}"
     },
     "dependencies": {
-        "react": "^18.3.1",
-        "react-dom": "^18.3.1",
         "@emotion/css": "^11.10.5",
         "@emotion/react": "^11.10.5",
         "@emotion/styled": "^11.10.5",
@@ -25,8 +23,11 @@
         "husky": "^8.0.2",
         "iframe-resizer": "^4.3.2",
         "iframe-resizer-react": "^1.1.0",
+        "motion": "^11.11.17",
         "prettier": "^2.7.1",
+        "react": "^18.3.1",
         "react-div-100vh": "^0.7.0",
+        "react-dom": "^18.3.1",
         "react-helmet": "^6.1.0",
         "react-icons": "^4.6.0",
         "react-router-dom": "^6.4.3",
