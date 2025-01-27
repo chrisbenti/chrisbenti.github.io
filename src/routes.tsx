@@ -81,8 +81,7 @@ export const RedirectRoutes: IRedirectRoutes = {
         description: "My LinkedIn"
     },
     "/send-money": {
-        destination:
-            "https://chrisbenti.notion.site/Send-Money-cdf683da5d0b4607aa53ad9119f3fc9c",
+        destination: "https://notes.chrisbenti.com/send-money",
         description: "Ways to send me money"
     },
     "/resume-content": {
@@ -110,8 +109,7 @@ export const RedirectRoutes: IRedirectRoutes = {
         description: "full work history in CV format"
     },
     "/umikot": {
-        destination:
-            "https://chrisbenti.notion.site/Umikot-97462acd80d84e2499857e27a31e04b5?pvs=74",
+        destination: "https://notes.chrisbenti.com/umikot",
         description: "umikot instructions to share with people I give them too."
     }
 };
