@@ -106,8 +106,7 @@ export const RedirectRoutes: IRedirectRoutes = {
         description: "Calendly link"
     },
     "/cv": {
-        destination:
-            "https://chrisbenti.notion.site/CV-Chris-Bentivenga-8f73539934804d1eaa0de3ffc84ad8a6?pvs=4",
+        destination: "https://notes.chrisbenti.com/cv",
         description: "full work history in CV format"
     },
     "/umikot": {
