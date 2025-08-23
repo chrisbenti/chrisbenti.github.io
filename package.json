@@ -4,12 +4,12 @@
     "version": "0.0.0",
     "type": "module",
     "scripts": {
-        "dev": "vite",
-        "build": "tsc -b && vite build",
-        "preview": "vite preview",
-        "lint": "prettier --write . && eslint .",
-        "prepare": "husky install",
-        "spellcheck": "cspell src/**/*.{tsx,ts,html}"
+        "dev": "pnpm vite",
+        "build": "pnpm tsc -b && pnpm vite build",
+        "preview": "pnpm vite preview",
+        "lint": "pnpm prettier --write . && pnpm eslint .",
+        "prepare": "husky",
+        "spellcheck": "pnpm cspell src/**/*.{tsx,ts,html}"
     },
     "dependencies": {
         "@emotion/css": "^11.10.5",
@@ -20,7 +20,6 @@
         "@types/react-icons": "^3.0.0",
         "classnames": "^2.3.2",
         "cspell": "^6.14.3",
-        "husky": "^8.0.2",
         "iframe-resizer": "^4.3.2",
         "iframe-resizer-react": "^1.1.0",
         "motion": "^11.11.17",
@@ -43,6 +42,7 @@
         "eslint-plugin-react-hooks": "^5.1.0-rc.0",
         "eslint-plugin-react-refresh": "^0.4.9",
         "globals": "^15.9.0",
+        "husky": "^9.1.7",
         "typescript": "^5.5.3",
         "typescript-eslint": "^8.0.1",
         "vite": "^5.4.1"

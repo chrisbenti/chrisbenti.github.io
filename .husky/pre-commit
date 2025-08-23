@@ -1,5 +1,2 @@
-#!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
-
-npx prettier --check .
-npm run spellcheck
+pnpm prettier --check .
+pnpm run spellcheck
