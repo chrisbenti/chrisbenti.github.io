@@ -113,7 +113,7 @@ export const RedirectRoutes: IRedirectRoutes = {
         description: "umikot instructions to share with people I give them too."
     },
     "/discord": {
-        destination: "https://http://discord.com/users/361710258915246081",
+        destination: "https://discord.com/users/361710258915246081",
         description: "My discord profile"
     },
 };
