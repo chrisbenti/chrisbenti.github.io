@@ -1,9 +1,11 @@
 import React from "react";
 import ClockNumber from "./ClockNumber";
 import { useBackgroundColor } from "../../hooks/useBackgroundColor";
+import { useThemedColors } from "../../hooks/useThemedColors";
 
 export const Clock = () => {
-    useBackgroundColor("black");
+    const { background } = useThemedColors();
+    useBackgroundColor(background);
     return <OldClock></OldClock>;
 };
 

@@ -1,11 +1,12 @@
 import { useBackgroundColor } from "../hooks/useBackgroundColor";
-import { COLORS } from "../colors";
 import { NextGenPage } from "../components/royalBluePage";
 import { Link, Name, LinkContainer } from "../components/text";
 import { motion } from "motion/react";
+import { useThemedColors } from "../hooks/useThemedColors";
 
 export const IndexPage = () => {
-    useBackgroundColor(COLORS.OFF_WHITE);
+    const { background } = useThemedColors();
+    useBackgroundColor(background);
     return (
         <NextGenPage>
             <motion.div

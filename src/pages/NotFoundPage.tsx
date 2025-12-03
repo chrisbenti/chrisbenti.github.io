@@ -1,7 +1,7 @@
 import { RoyalBluePage } from "../components/royalBluePage";
 import styled from "@emotion/styled";
 import { GrDocumentMissing } from "react-icons/gr";
-import { COLORS } from "../colors";
+import { useThemedColors } from "../hooks/useThemedColors";
 
 const MissingPage = styled.div`
     display: flex;
@@ -13,23 +13,38 @@ const MissingPage = styled.div`
 const MissingIcon = styled(GrDocumentMissing)`
     font-size: 3em;
 `;
+
 const MissingText = styled.div`
     padding-top: 0.5em;
     font-size: 1em;
 `;
 
-const MissingSubtext = styled.a`
+const StyledMissingSubtext = styled.a<{
+    color: string;
+    backgroundColor: string;
+}>`
     margin-top: 1em;
     padding: 0.5em 1em;
     border-radius: 10px;
     font-size: 0.75em;
     text-decoration: none;
-    color: ${COLORS.OFF_WHITE};
-    background-color: ${COLORS.ROYAL_BLUE};
+    color: ${(props) => props.color};
+    background-color: ${(props) => props.backgroundColor};
     &:hover {
         opacity: 0.9;
     }
 `;
+
+const MissingSubtext = (props: { href: string; children: React.ReactNode }) => {
+    const { foreground, background } = useThemedColors();
+    return (
+        <StyledMissingSubtext
+            color={background}
+            backgroundColor={foreground}
+            {...props}
+        />
+    );
+};
 
 export const NotFoundPage = () => (
     <RoyalBluePage>

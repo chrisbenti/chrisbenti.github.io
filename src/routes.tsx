@@ -115,7 +115,7 @@ export const RedirectRoutes: IRedirectRoutes = {
     "/discord": {
         destination: "discord://discord.com/users/361710258915246081",
         description: "My discord profile"
-    },
+    }
 };
 
 type IIFramePages = {

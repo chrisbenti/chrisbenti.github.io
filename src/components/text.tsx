@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
-import { COLORS } from "../colors";
+import { useThemedColors } from "../hooks/useThemedColors";
+import { DetailedHTMLProps, AnchorHTMLAttributes } from "react";
 
 export const LinkContainer = styled.div`
     font-size: 1.5em;
@@ -9,20 +10,17 @@ export const LinkContainer = styled.div`
     justify-content: center;
     text-align: center;
     width: 100%;
-
     align-items: flex-start;
 `;
 
-export const Link = styled.a`
+const StyledLink = styled.a<{ color: string }>`
     text-decoration: none;
-    color: ${COLORS.ROYAL_BLUE};
+    color: ${(props) => props.color};
     display: inline-block;
     position: relative;
-
     &:not(:first-child) {
         margin-top: 0.3em;
     }
-
     &:before {
         background: none repeat scroll 0 0 transparent;
         bottom: 0;
@@ -31,14 +29,13 @@ export const Link = styled.a`
         height: 3px;
         left: 50%;
         position: absolute;
-        background: ${COLORS.ROYAL_BLUE};
+        background: ${(props) => props.color};
         transition:
             width 0.3s ease 0s,
             left 0.3s ease 0s;
         width: 0;
     }
     &:hover:before {
-        // Media query to prevent hover effects on mobile (collides with presses and makes it v ugly)
         @media (hover: hover) and (pointer: fine) {
             width: 100%;
             left: 0;
@@ -46,7 +43,17 @@ export const Link = styled.a`
     }
 `;
 
-export const LinkWithArrow = styled(Link)`
+export const Link = (
+    props: DetailedHTMLProps<
+        AnchorHTMLAttributes<HTMLAnchorElement>,
+        HTMLAnchorElement
+    >
+) => {
+    const { foreground } = useThemedColors();
+    return <StyledLink color={foreground} {...props} />;
+};
+
+const StyledLinkWithArrow = styled(StyledLink)`
     :after {
         top: calc(50% - 0.6em / 2);
         content: "⮕";
@@ -56,7 +63,17 @@ export const LinkWithArrow = styled(Link)`
     }
 `;
 
-export const Name = styled.div`
+export const LinkWithArrow = (
+    props: DetailedHTMLProps<
+        AnchorHTMLAttributes<HTMLAnchorElement>,
+        HTMLAnchorElement
+    >
+) => {
+    const { foreground } = useThemedColors();
+    return <StyledLinkWithArrow color={foreground} {...props} />;
+};
+
+const StyledName = styled.div<{ color: string }>`
     font-weight: 700;
     font-size: 2.5em;
     margin-top: 0.25em;
@@ -64,5 +81,10 @@ export const Name = styled.div`
         font-size: 2.35em;
     }
     text-align: left;
-    color: ${COLORS.ROYAL_BLUE};
+    color: ${(props) => props.color};
 `;
+
+export const Name = (props: { children?: React.ReactNode }) => {
+    const { foreground } = useThemedColors();
+    return <StyledName color={foreground} {...props} />;
+};
