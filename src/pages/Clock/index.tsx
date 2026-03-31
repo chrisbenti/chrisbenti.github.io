@@ -10,7 +10,7 @@ export const Clock = () => {
 };
 
 // eslint-disable-next-line @typescript-eslint/no-empty-object-type
-export class OldClock extends React.Component<{}, { time: Date }> {
+class OldClock extends React.Component<{}, { time: Date }> {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     constructor(props: any) {
         super(props);
